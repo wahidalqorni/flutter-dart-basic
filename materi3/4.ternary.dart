@@ -30,7 +30,7 @@ void main() {
 
   // null or not null
   var n1 = null;
-  var n2 = n1 ?? 7;
+  var n2 = n1 ?? 0;
   // "nama" : null
   // nama ?? "Not Defined";
   print(n2);

@@ -11,7 +11,7 @@ void main() {
       'Ahmad Rasyid'; // jika data yg didapatkan adalah null maka kita ubah nilainya 'Tidak ada catatan'
 
   String jumlah = "20";
-  String kalimat = 'It\'s easy';
+  String kalimat = 'It\'s easy'; // it\'s easy 'it's easy'
   String kalimat2 = "It's easier";
   int nilai = 78;
   print(kalimat2);
@@ -45,7 +45,7 @@ void main() {
   print("Provinsi asli : ${provinsi} ");
 
   // fungsi menghilangkan spasi pada kalimat (di awal dan di akhir)
-  print("Provinsi di trim :${provinsi.trim()}");
+  print("Provinsi di trim :${provinsi.trim()}"); // adalah
   // fungsi menghilangkan spasi pada kalimat (di awal)
   print("Provinsi di trim awal :${provinsi.trimLeft()}");
   // fungsi menghilangkan spasi pada kalimat ( di akhir)

@@ -32,7 +32,9 @@ String perkenalan2() {
 int angka() {
   int angka1 = 17;
   int angka2 = 20;
-  return angka1 + angka2;
+  int total = 0;
+  total = angka1 + angka2;
+  return total;
 }
 
 String ambilNama(String inputNama, String kelas) {

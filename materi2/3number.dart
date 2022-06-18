@@ -1,6 +1,7 @@
 void main() {
   num angka = 17; // ini tipe datanya adalah bilangan bulat (integer)
   num angka2 = 17.89; // ini tipe datanya adalah bilangan desimal (double)
+  num a = 17.0;
 
   int angka3 = 22;
   double angka4 = 22.5;

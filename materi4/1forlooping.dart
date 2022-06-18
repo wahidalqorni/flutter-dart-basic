@@ -36,4 +36,17 @@ void main() {
     print("Index : " + index.toString());
     print(daftarMakanan[index]);
   }
+
+  // perkalian menggunakan for
+  /**
+   * 1 x 7 = ?
+   * 2 x 7 = ?
+   * 3 x 7 = ?
+   * .....
+   * 10 x 7 = ?
+   */
+  for(int c = 1; c <= 10; c++) {
+    int perkalian = c * 7;
+    print("${c} x 7 = ${perkalian} ");
+  }
 }

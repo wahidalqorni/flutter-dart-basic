@@ -2,12 +2,14 @@ void main() {
   /**
    * buatlah formula perhitungan seblumnya ke dalam function2 yg menggunakan parameter (inputan nilai)
    */
-
-  print(kelPersegi(6, 7));
-  print(lLingkaran(6));
-  print(lLingkaran(6).ceil());
-  print(lLingkaran(6).round());
-  print(vBalok(1, 5, 7));
+  print(kelPersegi(7,2));
+  double manipulasi = kelPersegi(7, 2) + 10;
+  print(manipulasi);
+  // print(kelPersegi(6, 7));
+  // print(lLingkaran(6));
+  // print(lLingkaran(6).ceil());
+  // print(lLingkaran(6).round());
+  // print(vBalok(1, 5, 7));
 }
 
 double kelPersegi(double p, double l) {
