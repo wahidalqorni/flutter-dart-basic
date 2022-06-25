@@ -1,44 +1,49 @@
 void main(){
-  
-  // panggil constructor utama
-  RekeningBank rekeningBank = RekeningBank();
-  print("Nama bank utama : ${rekeningBank.namaBank}");
+  // inheritance => pewarisan dari class yg satu ke class yg lain
+  Mobil brie = Mobil();
+  Mobil hrr = Mobil(roda: 16);
+  brie.klakson();
+  brie.jumlahRoda(4);
 
-  // panggil constructor cadangan
-  // RekeningBank rekeningBankAva = RekeningBank.ava();
-  RekeningBank rekeningBankAva = RekeningBank.ava(
-    namaBank: "Ava Bank"
-  );
+  // isi roda nilainy dapat dari constructor
+  hrr.jumlahRoda(hrr.roda);
+  print(brie.greeting());
+  print(hrr.greeting());
 
-  RekeningBank rekeningBankAva2 = RekeningBank.ava(
-    namaPemilik: "Person",
-    saldo: 9999999
-  );
-
-  print(rekeningBankAva.namaBank);
-  print(rekeningBankAva2.namaPemilik); // "Person"  
-  print(rekeningBankAva2.saldo);   // 9999999
-  print(rekeningBankAva2.namaBank);  // Ava
 }
 
+// class I
+class Kendaraan{
+  // atribut
+  String suaraKlakson = "Tiinnnn";
 
-class RekeningBank{
+  // method = function
 
-  // variabel/atribut yg bersifat public
-  String? namaPemilik;
-  String? namaBank;
-  int? saldo; // file yg lain
+  void klakson(){
+    print(suaraKlakson);
+  }
 
-  // variabel/atribut yg bersifat private
-  // ditandai dengan 
-  String? kode;
+  void jumlahRoda(int roda) {
+    print(roda);
+  }
+}
 
-  // constrcutor
-  RekeningBank({this.namaPemilik, this.namaBank,this.saldo});
+// class II
+class Mobil extends Kendaraan {
+  // atribut
+  int roda;
+  
+  // constructor
+  Mobil({this.roda = 0});
 
-  // default value saat pemanggilan object kelas constructorny tidak diisi
-  RekeningBank.ava({
-    this.namaPemilik, this.namaBank = "Ava", this.saldo
-  });
+// @override => mereplace isi function / method yg ada di class induk mjd sesuai yg kita inginkan
+@override
+void jumlahRoda(int roda) {
+    print("Rodanya : ${roda} " );
+    super.jumlahRoda(roda);
+  }
 
+ String greeting(){
+  return "Hellow Cars";
+ }
 }
