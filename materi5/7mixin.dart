@@ -1,24 +1,11 @@
-import '5inheritance.dart';
-
 void main() {
   /**
    * abstract class => sebuah class yg dibuat hanya untuk menjadi kerangka bagi class2 yg mewarisinya
    * abstract class ini tidak bisa direalisasikan (dijadikan menjadi object)
    */
-  Mobil mobil = Mobil();
-  Motor motor = Motor();
-  Becak becak = Becak();
-
-  print("BECAK");
-  becak.melaju();
-  print("MOTOR");
-  print(motor.suaraKlakson);
-  print("MOBIL");
-  mobil.suaraKlakson = "Telolet";
-  motor.melaju();
-  mobil.klakson();
-  mobil.jumlahRoda(4);
-  mobil.ngerem();
+  Bemo bemo = Bemo();
+  bemo.inisial2();
+  bemo.inisial3();
 }
 
 abstract class Kendaraan {
@@ -56,8 +43,29 @@ class Mobil extends Kendaraan {
 class Motor extends Mobil {
   @override
   void ngerem() {
-  print("Serrttt");
-}
+    print("Serrttt");
+  }
+
+  String ngegas(){
+    return "Motor digass!!!";
+  }
 }
 
 class Becak extends Kendaraan {}
+
+// Mixin
+mixin RodaDua {
+  void inisial2(){
+    print("Roda Dua");
+  }
+}
+
+mixin RodaTiga {
+  void inisial3(){
+    print("Roda Tiga");
+  }
+}
+
+class Bemo with RodaDua, RodaTiga  {
+
+}
